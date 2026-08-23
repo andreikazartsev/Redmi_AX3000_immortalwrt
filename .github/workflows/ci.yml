@@ -65,6 +65,11 @@ jobs:
             CONFIG_REPRODUCIBLE_DEBUG_INFO=y
 
             CONFIG_PACKAGE_luci=y
+            CONFIG_PACKAGE_luci=y
+            CONFIG_PACKAGE_luci-base=y
+            CONFIG_PACKAGE_sing-box=y
+            CONFIG_PACKAGE_kmod-nft-tproxy=y
+            CONFIG_PACKAGE_kmod-t
           EOF
           make defconfig
 
