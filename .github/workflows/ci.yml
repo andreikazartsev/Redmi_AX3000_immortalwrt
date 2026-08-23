@@ -65,11 +65,15 @@ jobs:
             CONFIG_REPRODUCIBLE_DEBUG_INFO=y
 
             CONFIG_PACKAGE_luci=y
-            CONFIG_PACKAGE_luci=y
             CONFIG_PACKAGE_luci-base=y
+            CONFIG_PACKAGE_luci-i18n-base-ru=y
             CONFIG_PACKAGE_sing-box=y
             CONFIG_PACKAGE_kmod-nft-tproxy=y
-            CONFIG_PACKAGE_kmod-t
+            CONFIG_PACKAGE_kmod-tun=y
+            CONFIG_PACKAGE_jq=y
+            CONFIG_PACKAGE_dnsmasq-full=y
+            CONFIG_PACKAGE_curl=y
+            CONFIG_PACKAGE_htop=y
           EOF
           make defconfig
 
