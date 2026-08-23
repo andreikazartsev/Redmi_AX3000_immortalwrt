@@ -56,29 +56,27 @@ jobs:
             CONFIG_TARGET_qualcommax_ipq50xx=y
             CONFIG_TARGET_qualcommax_ipq50xx_DEVICE_redmi_ax3000=y
 
+            # Убираем ALL_NONSHARED - это создает слишком маленький overlay
+            # CONFIG_ALL_NONSHARED=y
+
             CONFIG_IB=y
-            # CONFIG_IB_STANDALONE is not set
             CONFIG_SDK=y
             CONFIG_MAKE_TOOLCHAIN=y
 
-            CONFIG_ALL_NONSHARED=y
-            CONFIG_REPRODUCIBLE_DEBUG_INFO=y
-
+            # Базовые пакеты
             CONFIG_PACKAGE_luci=y
             CONFIG_PACKAGE_luci-base=y
             CONFIG_PACKAGE_luci-i18n-base-ru=y
+
+            # Зависимости Podkop (встраиваем в прошивку)
             CONFIG_PACKAGE_sing-box=y
             CONFIG_PACKAGE_kmod-nft-tproxy=y
             CONFIG_PACKAGE_kmod-tun=y
             CONFIG_PACKAGE_jq=y
             CONFIG_PACKAGE_dnsmasq-full=y
+            CONFIG_PACKAGE_coreutils-base64=y
+            CONFIG_PACKAGE_bind-dig=y
             CONFIG_PACKAGE_curl=y
-            CONFIG_PACKAGE_htop=y
-            CONFIG_TARGET_ROOTFS_PARTSIZE=512
-            CONFIG_TARGET_ROOTFS_EXT4FS=n
-            CONFIG_TARGET_ROOTFS_SQUASHFS=y
-            CONFIG_TARGET_UBIFS_FREE_SPACE_FIXUP=y
-            CONFIG_TARGET_UBIFS_COMPRESSION_ZLIB=y
           EOF
           make defconfig
 
