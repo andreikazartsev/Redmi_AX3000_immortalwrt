@@ -74,6 +74,11 @@ jobs:
             CONFIG_PACKAGE_dnsmasq-full=y
             CONFIG_PACKAGE_curl=y
             CONFIG_PACKAGE_htop=y
+            CONFIG_TARGET_ROOTFS_PARTSIZE=512
+            CONFIG_TARGET_ROOTFS_EXT4FS=n
+            CONFIG_TARGET_ROOTFS_SQUASHFS=y
+            CONFIG_TARGET_UBIFS_FREE_SPACE_FIXUP=y
+            CONFIG_TARGET_UBIFS_COMPRESSION_ZLIB=y
           EOF
           make defconfig
 
