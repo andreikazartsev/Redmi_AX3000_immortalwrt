@@ -45,4 +45,6 @@ How To install
 - [ImmortalWrt Packages](https://github.com/immortalwrt/packages): Community repository of ported packages.
 - [OpenWrt Routing](https://github.com/openwrt/routing): Packages specifically focused on (mesh) routing.
 - [OpenWrt Video](https://github.com/openwrt/video): Packages specifically focused on display servers and clients (Xorg and Wayland).
-- Версия подготовлена для использования Podkop и Zapret, добавлены пакеты не достающие пакеты, для установки podkop нужно форматировать раздел mtd20 и объединить его в общий overlay. Если нет никакого понимания как это сделать то можно обратиться к ИИ и под его руководством сделать необходимые шаги для расширения памяти.
+- Версия подготовлена для использования Podkop и Zapret, добавлены не достающие пакеты, для установки podkop нужно форматировать раздел mtd20 и объединить его в общий overlay. Если нет никакого понимания как это сделать то можно обратиться к ИИ и под его руководством сделать необходимые шаги для расширения памяти.
+- в последнем релизе в разделе software память должна быть около 5 мб, если больше или меньше, то вы установили не тот релиз.
+- Для установки используем обычный раздел openwrt обновление/восстановление в роутере и используем файл с расширением ubi.
