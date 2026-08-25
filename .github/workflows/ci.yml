@@ -59,13 +59,29 @@ jobs:
             CONFIG_IB=y
             CONFIG_SDK=y
 
+            # Базовые пакеты
             CONFIG_PACKAGE_luci=y
             CONFIG_PACKAGE_luci-base=y
             CONFIG_PACKAGE_luci-i18n-base-ru=y
+
+            # Драйверы файловой системы UBIFS (встроены в ядро)
+            CONFIG_PACKAGE_kmod-fs-ubifs=y
+
+            # Утилиты для работы с UBI/UBIFS
+            CONFIG_PACKAGE_mtd-utils-ubifs=y
+            CONFIG_PACKAGE_uboot-envtools=y
+
+            # Для Extroot (автомонтирование overlay)
+            CONFIG_PACKAGE_block-mount=y
+
+            # Зависимости Podkop
+            CONFIG_PACKAGE_sing-box-tiny=y
             CONFIG_PACKAGE_kmod-nft-tproxy=y
             CONFIG_PACKAGE_kmod-tun=y
             CONFIG_PACKAGE_jq=y
             CONFIG_PACKAGE_dnsmasq-full=y
+            CONFIG_PACKAGE_coreutils-base64=y
+            CONFIG_PACKAGE_bind-dig=y
           EOF
           make defconfig
 
